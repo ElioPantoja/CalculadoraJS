@@ -10,11 +10,11 @@ body {
 }
 
 #display{
-  background-color: rgb(110, 217, 219);
+  background-color: rgba(147, 175, 175, 0.836);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   text-align: right;
-  height: 20vh;
+  height: 15vh;
   font-size: 2em;
   font-weight: bold;
 }
@@ -22,27 +22,32 @@ body {
 #buttonsBox{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  height: 75vh;
   display:grid;
-  grid-template-columns: 25% 25% 25% 25% ;
-  box-sizing: border-box;
-  margin:auto;
-  justify-content: space-around;
-  background-color: rgb(51, 141, 143);
-  height: 80vh;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr) ;
+  grid-template-rows:repeat(5,1fr);
+  background-color: rgba(31, 151, 153, 0.541);
+  
 }   
 
 .button{
+  background-color:rgb(11, 156, 167);
+  font-size: 2em;
   border-radius: 15px;
-  width: 90%;
-  height: 90%;
+  width: 8vw;
+  height: 8vh;
+  
+}
+.button:first-child{
+  width: 19vw;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
-.big-button{
-  border-radius: 15px;
-  width: 200%;
-  height: 90%;
-}
-
-#first-line, #second-line{
-  justify-content: space-between;
+.button:nth-child(16){
+  width: 19vw;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
