@@ -1,13 +1,18 @@
 document.getElementById("C").onclick = function(){
-    document.getElementById("display-digit").innerHTML ="0"
+    document.getElementById("display-digit").innerHTML =""
  }
 
 
 
-let numbers = document.querySelectorAll(".button")   /*Detecta a que boton hice click  */
+let numbers = document.querySelectorAll(".button")   //Atrapo a todos los botones dentro de la variable 
 
-numbers.forEach(element => {   
-    element.addEventListener("click", ()=> {
-        document.getElementById("display-digit").innerHTML = element.innerHTML
+numbers.forEach(numberSelected => {                        //Asigna que a cada boton que le haga click, haga lo siguiente...
+    numberSelected.addEventListener("click", ()=> {
+        let displayNumbers = document.getElementById("display-digit")
+        if(numberSelected.innerHTML === "." && displayNumbers.innerHTML.includes(".")){
+            return
+        }
+        displayNumbers.innerHTML = displayNumbers.innerHTML + numberSelected.innerHTML //debo agregar .toString() a la suma de digitos??
+        
     })
 });
